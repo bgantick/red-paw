@@ -1,0 +1,32 @@
+{% extends data.outerLayout %}
+
+{% block startHead %}
+  {# Shut off "compatibility view" in IE for modern browser compatibility, #}
+  {# even when the browser is configured to emulate IE8. -Tom #}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{% endblock %}
+
+{% block extraHead %}
+  {{ super() }}
+  {# include externals here (google fonts, etc) #}
+{% endblock %}
+
+{% block beforeMain %}
+  <header class="container container--main">
+    <a href="/">Home</a>
+    <p>Header</p>
+  </header>
+  <main class="container container--main">
+{% endblock %}
+
+{% block afterMain %}
+  </main>
+  <footer class="container container--main">
+    <p>Footer</p>
+  </footer>
+{% endblock %}
+
+{# At the END of the DOM so it can easily remove everything else #}
+{% block extraBody %}
+  {{ apos.browserRequirements.message() }}
+{% endblock %}

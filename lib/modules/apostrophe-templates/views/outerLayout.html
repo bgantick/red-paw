@@ -1,0 +1,11 @@
+{% extends "outerLayoutBase.html" %}
+
+{% if data.piece %}
+  {% set title = data.piece.title %}
+{% else %}
+  {% set title = data.page.title %}
+{% endif %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block extraHead %}{% endblock %}

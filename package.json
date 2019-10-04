@@ -1,0 +1,63 @@
+{
+  "name": "red-paw",
+  "version": "1.1.0",
+  "description": "An Apostrophe site for Red Paw Emergency Relief Team",
+  "private": true,
+  "scripts": {
+    "sprite": "svgstore -o public/svgs/svg.svg src/svgs/**/*.svg",
+    "build": "npm run sprite && webpack --mode production",
+    "test": "concurrently \"npm run eslint\" \"npm run stylelint\"",
+    "eslint": "./node_modules/.bin/eslint eslint .",
+    "stylelint": "./node_modules/.bin/stylelint \"src/**/*.scss\"",
+    "pa11y": "./node_modules/.bin/pa11y-ci --sitemap http://localhost:3000/sitemap.xml",
+    "dev": "concurrently --kill-others \"npm run sprite && webpack-serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "P'unk Avenue",
+  "license": "MIT",
+  "dependencies": {
+    "apostrophe": "^2.89.1",
+    "apostrophe-browser-requirements": "^2.0.1",
+    "apostrophe-pieces-submit-widgets": "^2.0.4",
+    "apostrophe-redirects": "^2.2.0",
+    "apostrophe-site-map": "^2.5.1",
+    "bootstrap": "^4.3.1",
+    "concurrently": "^3.5.1",
+    "svg4everybody": "^2.1.9"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "chalk": "^2.4.2",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.17.0",
+    "eslint-config-punkave": "^1.0.8",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^3.0.1",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.11.0",
+    "pa11y-ci": "^2.3.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.5",
+    "postcss-scss": "^1.0.5",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-punkave": "^1.1.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "svgstore-cli": "^1.3.1",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-serve": "^1.0.2"
+  }
+}

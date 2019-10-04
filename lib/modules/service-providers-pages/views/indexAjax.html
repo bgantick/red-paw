@@ -1,0 +1,21 @@
+{% set page = data.page %}
+{% set pieces = data.pieces %}
+{% set filters = data.piecesFilters %}
+{% set query = data.query %}
+
+{% macro here(changes) %}
+  {{ page._url | build({
+    type: query.type,
+    petTypes: query.petTypes
+  }, changes) }}
+{% endmacro %}
+
+<div class="">
+  <ul>
+    {% for item in pieces %}
+      <li>
+        <h2>{{ item.title }}</h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

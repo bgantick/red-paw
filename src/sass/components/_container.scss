@@ -1,0 +1,6 @@
+.container {
+  @include make-container();
+  &--main {
+    max-width: 40rem;
+  }
+}

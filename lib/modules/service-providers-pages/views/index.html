@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% set page = data.page %}
+
+{% block main %}
+  <h1>Lodging</h1>
+  <div data-apos-ajax-context="filtered-content">
+    {% include 'indexAjax.html' %}
+  </div>
+  <!-- Need to pass Lodging address to transportation page -->
+  <a href="/transportation?address=SOME_ADDRESS">Transportation</a>
+{% endblock %}
