@@ -23,4 +23,4 @@ npm run dev
 
 Other useful scripts are in `package.json`.
 
-Main entrypoint/module config lives in `app.js`
+Main entrypoint/module config lives in `app.js`.
