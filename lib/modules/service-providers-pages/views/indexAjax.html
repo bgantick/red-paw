@@ -11,11 +11,63 @@
 {% endmacro %}
 
 <div class="">
-  <ul>
-    {% for item in pieces %}
-      <li>
-        <h2>{{ item.title }}</h2>
+
+  <div class="instruction-text">
+    <p class="hotel-instructions">
+    These are the instructions for hotel stuff
+    <br>
+      1) Find a Hotel
+      <br>
+      2) Call Hotel and book
+      <br>
+      3) Tap "I've booked" Button
+  </p>
+
+  </div>
+  <ul class="hotels-list">
+    {% for hotel in pieces %}
+    <li class="hotel-card">
+        <h3>
+          {{ hotel.title }}
+        </h3>
+        <h4>
+           
+          <a class="external" href="https://www.google.com/maps/search/?api=1&amp;query={{ hotel.address }}">
+              {{ hotel.address}}
+              <br>
+              {{ hotel.zip }}
+          </a>
+
+        
+         <!-- X Miles away? or google maps link -->
+        </h4>
+        <p>
+         {% if hotel.accessibility %}
+          {{ hotel.accessibility }} 
+        {% endif %}
+          <br>
+          {{ hotel.petTypes }} 
+          <!-- Do We Need This? filtered? -->
+        </p>
+        <button class="call-button">
+          <a href="tel:{{ hotel.phone }}"> CALL {{ hotel.phone }}</a>
+        </button>
+        <br>
+        <button class="booked-button" >
+          <!-- conditional link to summary or transportation -->
+          <a href="/transportation?address=SOME_ADDRESS">
+            I've booked this hotel, Continue to next step
+          </a>
+        </button>
       </li>
     {% endfor %}
   </ul>
+
+  <button> 
+    I Have Chosen This Hotel 
+  
+<!-- This should take you to the next page in the progression  if theres transpo then it should
+have the address of the current hotel auto populate -->
+    <a >Transportation</a>
+  </button>
 </div>
