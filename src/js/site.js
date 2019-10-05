@@ -1,18 +1,17 @@
 import svg4everybody from 'svg4everybody';
-import module from './modules/module';
+import pin from './modules/pin';
 
 svg4everybody();
 
-// TODO: Rename PROJECT to desired namespace
-const PROJECT = {};
-PROJECT.module = module;
+const RED = {};
+RED.pin = pin;
 
 if (!window.namespace) {
-  window.PROJECT = PROJECT;
+  window.PROJECT = RED;
 }
 
-Object.keys(PROJECT).forEach(function (key) {
-  if (PROJECT[key].hasOwnProperty('init')) {
-    PROJECT[key].init();
+Object.keys(RED).forEach(function (key) {
+  if (RED[key].hasOwnProperty('init')) {
+    RED[key].init();
   }
 });

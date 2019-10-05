@@ -1,10 +1,11 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-<div class="">
-  <h1>I need help</h1>
-  <a href="#">I need transportation</a>
-  <a href="#">I need lodging</a>
-  <a href="#">I need both</a>
+<div class="home">
+  <h1>What do you need?</h1>
+  <div class="btn big-btn"><a href="/client?transportationOnly=true">Transportation</a></div>
+  <div class="btn big-btn"><a href="/client?lodgingOnly=true">Lodging</a></div>
+  <div class="btn big-btn"><a href="/client">Both</a></div>
+  <h3><a href="/provider">Donor Sign Up</a></h3>
 </div>
 {% endblock %}
