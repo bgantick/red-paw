@@ -20,6 +20,7 @@ const apos = require('apostrophe')({
     'apostrophe-admin-bar': {},
     'apostrophe-redirects': {},
     'helpers': {},
+    // 'express-middleware': {},
     'clients': { extend: 'apostrophe-pieces' },
     'clients-submit-widgets': { extend: 'apostrophe-pieces-submit-widgets' },
     'service-providers': { extend: 'apostrophe-pieces' },
