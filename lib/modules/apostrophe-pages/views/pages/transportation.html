@@ -1,8 +1,35 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-<div class="">
-  <h1>Transportation Page</h1>
+
+<style>
+#container-lyft{
+  align-content: center;
+  margin-top: 5%;
+  color:red;
+}
+.header-lyft{
+  display: none;
+}
+
+
+</style>
+<div id="container-lyft" >
+  <h1 class= "header-lyft" style>Lyft</h1>
+
+  <h2>Time For Your Ride!</h2>
+    <div class="context-lyft">
+      <p>Tap the button below to open the Lyft App<br> A Promo Code to cover a ride to your destination will be applied. . .<br> Safe Travels!</p>
+      <br>
+        <div class="location-lyft">
+            <p style= text-decoration: underline;>Hotel Address Here</p>
+        </div>
+    </div>
+
+
+    <div class="button-lyft">
+      <a type="button" href="https://ride.lyft.com/?ride_type=lyft&partner=VKbDh81sERp1"name="Grab a Lyft">Lyft<a>
+    </div>
   <!-- Need lyft button -->
 </div>
 {% endblock %}
