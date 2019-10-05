@@ -1,10 +1,10 @@
 import svg4everybody from 'svg4everybody';
-import module from './modules/module';
+import pin from './modules/pin';
 
 svg4everybody();
 
 const RED = {};
-RED.module = module;
+RED.pin = pin;
 
 if (!window.namespace) {
   window.PROJECT = RED;
