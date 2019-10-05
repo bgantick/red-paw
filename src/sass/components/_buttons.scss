@@ -1,13 +1,10 @@
 .btn {
+  display: inline-block;
   color: $white;
   font-weight: 700;
   border-radius: 40px;
   text-align: center;
-
-  a {
-    color: $white;
-    text-decoration: none
-  }
+  text-decoration: none;
 }
 
 .small-btn {

@@ -3,9 +3,9 @@
 {% block main %}
 <div class="home">
   <h1>What do you need?</h1>
-  <div class="btn big-btn"><a href="#">Transportation</a></div>
-  <div class="btn big-btn"><a href="#">Lodging</a></div>
-  <div class="btn big-btn"><a href="#">Both</a></div>
-  <h3><a href="#">Donor Sign Up</a></h3>
+  <a class="btn big-btn" href="/client?transportationOnly=true">Transportation</a>
+  <a class="btn big-btn" href="/client?lodgingOnly=true">Lodging</a>
+  <a class="btn big-btn" href="/client">Both</a>
+  <h3><a href="/provider">Donor Sign Up</a></h3>
 </div>
 {% endblock %}

@@ -1,0 +1,27 @@
+.hotel-instructions {
+  font-size: 1.75rem;
+  margin-bottom: 5%;
+}
+
+.hotels-list {
+  .hotel-card {
+    padding: 5%;
+    margin-bottom: 5%;
+    border: 1px solid black;
+  }
+}
+
+.clock {
+  color:darkgray;
+  border-style:none;
+  width:40px;
+  height:60px;
+  font-size:60px;
+}
+
+td {
+  border:2px solid darkgray;
+}
+table {
+  border-collapse:collapse;
+}
