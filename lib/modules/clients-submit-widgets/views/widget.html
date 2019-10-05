@@ -1,12 +1,8 @@
 {% import "apostrophe-schemas:macros.html" as schemas %}
 
-<script type="text/javascript">
-  console.log({{ data.schema | json }})
-</script>
-
 <form class="apos-submit-pieces-form apos-ui" data-apos-pieces-submit-form>
   {{ schemas.fields(data.schema, { tabs: false }) }}
-  <button>Confirm and continue</button>
+  <button class="btn small-btn">Confirm and continue</button>
   {# Later gets hoisted out and becomes visible #}
   <div class="apos-pieces-submit-thank-you" data-apos-pieces-submit-thank-you>
     <h4>Thank you for your submission! We will review it soon.</h4>
