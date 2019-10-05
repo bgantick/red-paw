@@ -1,0 +1,33 @@
+.btn {
+  color: $white;
+  font-weight: 700;
+  border-radius: 40px;
+  text-align: center;
+
+  a {
+    color: $white;
+    text-decoration: none
+  }
+}
+
+.small-btn {
+  background-color: $blue;
+  font-size: 16px;
+  padding: 6%;
+  width: 60%;
+
+  &:focus, &:hover {
+    background-color: darken($blue, 20%);
+  }
+}
+
+.big-btn {
+  background-color: $red;
+  font-size: 21px;
+  padding: 8%;
+  width: 90%;
+
+  &:focus, &:hover {
+    background-color: darken($red, 20%);
+  }
+}
