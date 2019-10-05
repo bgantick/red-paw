@@ -4,18 +4,59 @@
 {% set query = data.query %}
 
 {% macro here(changes) %}
-  {{ page._url | build({
+{{ page._url | build({
     type: query.type,
     petTypes: query.petTypes
   }, changes) }}
 {% endmacro %}
 
 <div class="">
-  <ul>
-    {% for item in pieces %}
-      <li>
-        <h2>{{ item.title }}</h2>
-      </li>
+
+  <div class="instruction-text">
+    <p class="hotel-instructions">
+      These are the instructions for hotel stuff
+      <br>
+      1) Find a Hotel
+      <br>
+      2) Call Hotel and book
+      <br>
+      3) Tap "I've booked" Button
+    </p>
+
+  </div>
+  <ul class="hotels-list">
+    {% for hotel in pieces %}
+    <li class="hotel-card">
+      <h3>
+        {{ hotel.title }}
+      </h3>
+      <h4>
+        <a class="external" target="_blank" href="https://www.google.com/maps/search/?api=1&amp;query={{ hotel.address }}">
+          {{ hotel.address}}
+        </a>
+        <!-- X Miles away? or google maps link -->
+      </h4>
+      <p class="details" >
+        <!-- Do We Need This? it should be filtered? maybe at the top of page -->
+        Maximum capacity: {{ hotel.capacity }} people
+        <br>
+        Pet Types: {{ hotel.petTypes }}
+        {% if hotel.wheelchair %}
+        <br>
+        Wheelchair Accessible
+      {% endif %}
+      </p>
+      <button class="call-button">
+        <a href="tel:{{ hotel.phone }}"> Call {{ hotel.phone }}</a>
+      </button>
+      <br>
+      <button class="booked-button">
+        <!-- conditional link to summary or transportation -->
+        <a href="/transportation?address=SOME_ADDRESS">
+          I've booked this hotel, Continue to next step
+        </a>
+      </button>
+    </li>
     {% endfor %}
   </ul>
 </div>
