@@ -27,4 +27,8 @@
   &:focus, &:hover {
     background-color: darken($red, 20%);
   }
+
+  &--blue {
+    background-color: $blue;
+  }
 }
