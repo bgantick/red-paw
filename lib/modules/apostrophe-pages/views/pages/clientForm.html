@@ -1,8 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-<div class="">
-  <h1>Client form</h1>
-  {{ apos.singleton(data.page, 'submit', 'clients-submit') }}
-</div>
+  <div class="">
+    <p>Please tell us about you so we can fulfill your request.</p>
+    <div class="client-form">
+      {{ apos.singleton(data.page, 'submit', 'clients-submit') }}
+    </div>
+  </div>
 {% endblock %}
