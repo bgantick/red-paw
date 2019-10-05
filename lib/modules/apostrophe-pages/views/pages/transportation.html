@@ -3,54 +3,94 @@
 {% block main %}
 
 <style>
-#container-lyft{
-  align-text: float;
-  align-content: center;
+.container-lyft{
+  color:white;
+  text-align: center;
   margin-top: 5%;
-  background: #BEBEBE;
-  /* color:red; */
+  margin-bottom: 25%;
+  padding-bottom: 15%;
+  padding-top:15%;
+  /* margin-right:75%;
+  margin-left:75%; */
+  background:#F6F6F6;
+  align-content: center;
+  /* background: #BEBEBE; */
+}
+.lyft-box{
+  /* background:#BEBEBE; */
+  Border: 2px faded;
+  border-radius: 15px;
+  margin:5%;
+  padding: 15%;
+background-image: linear-gradient(to right, #BEBEBE, #6C6C6C);
+}
+.header-lyft2{
+  color:white;
 }
 
 .button-lyft{
-  /* border: 2px solid black;
+  /* background:#BEBEBE; */
+  Border: 2px faded;
+  border-radius: 15px;
+  margin:5%;
+  padding: 15%;
+background-image: linear-gradient(to right, #BEBEBE, #6C6C6C);
+}
+
+.text-lyft{
+padding-bottom:5%;
+ line-height: 200%;
+ font-size:1.6rem;
+}
+/* .button-lyft{
+  border: 2px solid black;
   text-align:    center;
-  display:       inline-block; */
+  display:       inline-block;
   background:    #3B0F81;
-  /* background:    linear-gradient(#E02020, #145C96); */
+  background:    linear-gradient(#E02020, #145C96);
   border-radius: 1000px;
   box-shadow:    -1px 1px #222222;
   padding:       3px 24px;
   color:         white;
   display:       inline-block;
-  /* font:          normal normal 22px/1 "Ubuntu", sans-serif; */
+  font:          normal normal 22px/1 "Ubuntu", sans-serif;
   color: white;
   text-align:    center;
   text-shadow:   1px 1px #660000;
-}
+} */
 .header-lyft{
   display: none;
 }
 
 
 </style>
-<div id="container-lyft" >
-  <h1 class= "header-lyft" style>Lyft</h1>
+<div class="container">
+  <div class="container-lyft">
+    <div class="lyft-box">
+      <h1 class= "header-lyft" style>Lyft</h1>
 
-  <h2>Time For Your Ride!</h2>
-    <div class="context-lyft">
-      <p>Tap the button below to open the Lyft App<br> A Promo Code to cover a ride to your destination will be applied. . .<br> Safe Travels!</p>
-      <br>
-        <div class="location-lyft">
-            <p style= text-decoration: underline;>Hotel Address Here</p>
+      <h2 class= "header-lyft2">Time For Your Ride!</h2>
+    </div>
+
+    <div class="lyft-box">
+      <div class="context-lyft">
+        <p class="text-lyft">Tap the button below to open Lyft <br> A Promo Code to cover a ride to your destination will be applied...<br> Safe Travels!</p>
+        <br>
+      </div>
+
+          <div class="location-lyft">
+              <p class="text-lyft">Hotel Address Here</p>
+          </div>
+    </div>
+
+      <div class="button-lyft">
+        <div class="btn big-btn">
+          <a type="button" href="https://ride.lyft.com/?ride_type=lyft&partner=000000000000&credits=CUSTOM_CODE"name="Grab a Lyft">Lyft<a>
+                    <!-- partner= Partner id which is available in the lyft API via user -->
+                        <!-- Credits is the COupon code currently CUSTOM_CODE -->
         </div>
-    </div>
+      </div>
+  </div>
 
-
-    <div class="button-lyft">
-      <!-- partner= Partner id which is available in the lyft API via user -->
-      <!-- Credits is the COupon code currently CUSTOM_CODE -->
-      <a type="button" href="https://ride.lyft.com/?ride_type=lyft&partner=000000000000&credits=CUSTOM_CODE"name="Grab a Lyft">Lyft<a>
-    </div>
-  <!-- Need lyft button -->
 </div>
 {% endblock %}
