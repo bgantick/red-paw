@@ -1,0 +1,94 @@
+/* PROVIDER PAGE */
+
+#redPawLogo {
+    width: 300px;
+    margin-left: 101px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .desktopStyles .btn {
+    background-color: #E02020;
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 21px;
+    height: 75px;
+    border-radius: 37.5px;
+    padding: 16px;
+    width: 225px;
+    float: left;
+    margin-left: 20px;
+}
+  
+  .heroSection {
+    margin-bottom: 80px;
+    padding-right: 10px;
+  }
+  
+  .imageSection {
+    width: 50%;
+    float: left;
+    max-width: auto;
+  }
+  
+  .redPawPhoto {
+    margin-left: 101px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .heading {
+    margin-left: 101px;
+    font-size: 24px;
+    margin-right: 101px;
+  }
+  
+  .introCopy {
+  }
+
+  .middleSection {
+    display: inline-flex;
+  }
+  
+  #subHeading {
+    color: grey;
+    margin-left: 101px;
+    font-size: 24px;
+    margin-bottom: 80px;
+    width: 585px;
+  }
+  
+  #partnerButton {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+    margin-left: 25px;
+  }
+  
+  .sponsorsSection {
+    margin-left: 101px;
+    margin-bottom: 100px;
+  
+  }
+  
+  .sponsorTitle {
+    margin-top: 80px;
+    clear: both;
+  }
+  
+  .sponsors {
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  
+  @media only screen and (max-width: 974px) {
+    .heading {
+      margin-left: 0px;
+    }
+  }

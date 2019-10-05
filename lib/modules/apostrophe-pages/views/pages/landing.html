@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block beforeMain %}
+<style>
+    .apos-ui {
+        display: none;
+    }
+</style>
+<div class="desktopStyles">
+    <header>
+        <img id="redPawLogo" src="/images/redpaw-logo.png"></img>
+    </header>
+    <div class="heroSection">
+        <div class="imageSection">
+            <img src="/images/catman.png" class="redPawPhoto" height="400"
+                alt="Photo of red paw volunteer holding a kitten"></img>
+        </div>
+        <div class="introCopy">
+            <h4 class="heading">Red Paw is the only organization in the country that provides 24/7 emergency response
+                for
+                citizens w/pets
+                affected by house fires & residential disasters. Services include: Search & Rescue, emergency medical
+                care,
+                emergency transport, emergency veterinary care & emergency shelter. Run by firefighters & veterans.
+                Based
+                out of Philly.</h4>
+        </div>
+    </div>
+    <div class="middleSection">
+        <h4 id="subHeading">Providing pet-friendly lodging is one of the most important services Red Paw provides.
+            We're always looking for hotel partners to join our directory. Could your hotel help a neighbor in need?
+        </h4>
+        <a href="/provider"><button class="btn small-btn">Partner with us</button></a>
+    </div>
+    <div class="sponsorTitle">
+        <h4 class="heading">Some sponsors we work with</h4>
+    </div>
+    <div class="sponsorsSection">
+        <img src="/images/partner1.png" class="sponsors"></img>
+        <img src="/images/partner2.png" class="sponsors"></img>
+        <img src="/images/partner3.png" class="sponsors"></img>
+    </div>
+    {% endblock %}
+
+    {% block afterMain %}
+    </main>
+    <footer class="container container--main">
+        <p>Emergency contact information: GLOBAL_NUMBER</p>
+    </footer>
+    {% endblock %}
+</div>
