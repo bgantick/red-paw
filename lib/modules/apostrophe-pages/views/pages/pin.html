@@ -2,7 +2,14 @@
 
 {% block main %}
 <div class="">
-  <h1> Enter your Pin
-  </h1>
+  <h1> Enter your Pin </h1>
+  <table>
+    <tr>
+      <td><input class="clock" type="text" maxlength="1" size="1" onkeyup="next(2)"></td>
+      <td><input id="2" class="clock" type="text" maxlength="1" size="1" onkeyup="next(3)"></td>
+      <td><input id="3" class="clock" type="text" maxlength="1" size="1" onkeyup="next(4)"></td>
+      <td><input id="4" class="clock" type="text" maxlength="1" size="1"></td>
+    </tr>
+    </table>
 </div>
 {% endblock %}
