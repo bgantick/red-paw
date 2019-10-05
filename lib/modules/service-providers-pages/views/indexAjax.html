@@ -46,16 +46,7 @@
         Wheelchair Accessible
       {% endif %}
       </p>
-      <button class="btn small-btn">
-        <a href="tel:{{ hotel.phone }}"> Call {{ hotel.phone }}</a>
-      </button>
-      <br>
-      <button class="btn small-btn">
-        <!-- conditional link to summary or transportation -->
-        <a href="/transportation?address={{ hotel.address }}">
-          I've booked this hotel, Continue to next step
-        </a>
-      </button>
+      <a class="btn small-btn" href="tel:{{ hotel.phone }}"> Call {{ hotel.phone }}</a>
     </li>
     {% endfor %}
   </ul>
